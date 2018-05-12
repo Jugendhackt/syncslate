@@ -84,14 +84,14 @@ int main()
 		for (int x = 0; x < markers.at(i).size(); x++) {
 
 			if (x + 1 != markers.at(i).size()) {
-				cout << markers.at(i).at(x) + " | ";
+				//cout << markers.at(i).at(x) + " | ";
 			}
 			else {
-				cout << markers.at(i).at(x);
+				//cout << markers.at(i).at(x);
 			}
 
 		}
-		cout << "\n";
+		//cout << "\n";
 	}
 
 	system("pause >nul");
