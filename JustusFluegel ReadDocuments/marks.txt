@@ -1,0 +1,14 @@
+START RECORDING @ 2018-05-12 11:07:39
+0:00:02 - Hotkey 1 was pressed
+0:00:04 - Hotkey 2 was pressed
+0:00:06 - Hotkey 3 was pressed
+0:00:08 - Hotkey 4 was pressed
+0:00:09 - Hotkey 5 was pressed
+STOP RECORDING @ 2018-05-12 11:07:55
+START RECORDING @ 2018-05-12 13:15:37
+0:00:44 - Hotkey 1 was pressed
+0:00:47 - Hotkey 2 was pressed
+0:00:50 - Hotkey 3 was pressed
+0:00:52 - Hotkey 4 was pressed
+0:00:58 - Hotkey 5 was pressed
+STOP RECORDING @ 2018-05-12 13:16:41
