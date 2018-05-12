@@ -27,4 +27,4 @@ These libraries and plugins are needed to run syncslate.
 * [Lukas](https://github.com/luki)
 #### Mentors
 * Jasmin
-*
+* Lirije
