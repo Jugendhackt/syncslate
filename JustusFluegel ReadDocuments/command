@@ -1,1 +1,0 @@
-ffmpeg -i zwei.mov -filter_complex "[0:v]trim=start=17:end=22,setpts=PTS-STARTPTS[vo];[0:a]atrim=start=17:end=22,asetpts=PTS-STARTPTS[ao];[0:v]trim=start=29:end=31,setpts=PTS-STARTPTS[vt];[0:a]atrim=start=29:end=31,asetpts=PTS-STARTPTS[at];[vo][vt]concat[video];[ao][at]concat=v=0:a=1[audio]" -map [video] -map [audio] result.mov
