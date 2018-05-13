@@ -1,4 +1,4 @@
-# syncslate
+<img src="logo.png" alt="Logo" height="70" >
 This project is licensed under the [GNU General Public License v3.0](/LICENSE).
 
 ## Introduction
