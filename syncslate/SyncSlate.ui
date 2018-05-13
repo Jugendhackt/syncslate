@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>804</width>
-    <height>446</height>
+    <width>781</width>
+    <height>442</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -115,7 +115,26 @@
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>72</y>
+      <y>130</y>
+      <width>151</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Video_Name">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>130</y>
       <width>151</width>
       <height>81</height>
      </rect>
@@ -123,14 +142,56 @@
     <property name="text">
      <string/>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
-   <widget class="QLabel" name="Video_Name">
+   <widget class="QLabel" name="logo">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>80</y>
-      <width>151</width>
-      <height>81</height>
+      <x>430</x>
+      <y>330</y>
+      <width>351</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="timestamp_logo">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>50</y>
+      <width>141</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="video_logo">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>50</y>
+      <width>121</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="export_logo">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>40</y>
+      <width>141</width>
+      <height>121</height>
      </rect>
     </property>
     <property name="text">
@@ -143,7 +204,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>804</width>
+     <width>781</width>
      <height>21</height>
     </rect>
    </property>

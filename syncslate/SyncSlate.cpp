@@ -19,6 +19,36 @@ SyncSlate::SyncSlate(QWidget *parent):
 	QMainWindow(parent), ui(new Ui::SyncSlateClass)
 {
 	ui->setupUi(this);
+	QPixmap pix(":/SyncSlate/Resources/logo.png");
+
+	int w = ui->logo->width();
+	int h = ui->logo->height();
+
+	ui->logo->setPixmap(pix.scaled(w, h, Qt::KeepAspectRatio));
+
+
+	QPixmap pix2(":/SyncSlate/Resources/timestamp.png");
+
+	int w2 = ui->timestamp_logo->width();
+	int h2 = ui->timestamp_logo->height();
+
+	ui->timestamp_logo->setPixmap(pix2.scaled(w2, h2, Qt::KeepAspectRatio));
+
+
+	QPixmap pix3(":/SyncSlate/Resources/video.png");
+
+	int w3 = ui->video_logo->width();
+	int h3 = ui->video_logo->height();
+
+	ui->video_logo->setPixmap(pix3.scaled(w3, h3, Qt::KeepAspectRatio));
+
+
+	QPixmap pix4(":/SyncSlate/Resources/download.png");
+
+	int w4 = ui->export_logo->width();
+	int h4 = ui->export_logo->height();
+
+	ui->export_logo->setPixmap(pix4.scaled(w4, h4, Qt::KeepAspectRatio));
 }
 
 SyncSlate::~SyncSlate() {

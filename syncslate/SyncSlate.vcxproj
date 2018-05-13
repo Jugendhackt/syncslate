@@ -53,7 +53,7 @@
     <ClCompile>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <PreprocessorDefinitions>UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_MULTIMEDIA_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_OPENGL_LIB;QT_OPENGLEXTENSIONS_LIB;QT_POSITIONING_LIB;QT_QUICK_LIB;QT_QUICKWIDGETS_LIB;QT_QUICKCONTROLS2_LIB;QT_QMLTEST_LIB;QT_UITOOLS_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtMultimediaWidgets;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtOpenGLExtensions;$(QTDIR)\include\QtPositioning;$(QTDIR)\include\QtQuick;$(QTDIR)\include\QtQuickWidgets;$(QTDIR)\include\QtQuickControls2;$(QTDIR)\include\QtQuickTest;$(QTDIR)\include\QtUiTools;$(QTDIR)\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;C:\Qt\5.10.1\msvc2017_64\include;.\GeneratedFiles\$(ConfigurationName);C:\Qt\5.10.1\msvc2017_64\include\QtCore;C:\Qt\5.10.1\msvc2017_64\include\QtGui;C:\Qt\5.10.1\msvc2017_64\include\QtANGLE;C:\Qt\5.10.1\msvc2017_64\include\QtMultimedia;C:\Qt\5.10.1\msvc2017_64\include\QtMultimediaWidgets;C:\Qt\5.10.1\msvc2017_64\include\QtOpenGL;C:\Qt\5.10.1\msvc2017_64\include\QtOpenGLExtensions;C:\Qt\5.10.1\msvc2017_64\include\QtPositioning;C:\Qt\5.10.1\msvc2017_64\include\QtQuick;C:\Qt\5.10.1\msvc2017_64\include\QtQuickWidgets;C:\Qt\5.10.1\msvc2017_64\include\QtQuickControls2;C:\Qt\5.10.1\msvc2017_64\include\QtQuickTest;C:\Qt\5.10.1\msvc2017_64\include\QtUiTools;C:\Qt\5.10.1\msvc2017_64\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -62,30 +62,33 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
-      <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Qt\5.10.1\msvc2017_64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Multimediad.lib;Qt5MultimediaWidgetsd.lib;Qt5OpenGLd.lib;opengl32.lib;glu32.lib;Qt5OpenGLExtensionsd.lib;Qt5Positioningd.lib;Qt5Quickd.lib;Qt5QuickWidgetsd.lib;Qt5QuickControls2d.lib;Qt5QuickTestd.lib;Qt5UiToolsd.lib;Qt5Widgetsd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>C:\Qt\5.10.1\msvc2017_64\lib\qtmaind.lib;C:\Qt\5.10.1\msvc2017_64\lib\Qt5Cored.lib;C:\Qt\5.10.1\msvc2017_64\lib\Qt5Guid.lib;C:\Qt\5.10.1\msvc2017_64\lib\Qt5Multimediad.lib;C:\Qt\5.10.1\msvc2017_64\lib\Qt5MultimediaWidgetsd.lib;C:\Qt\5.10.1\msvc2017_64\lib\Qt5OpenGLd.lib;opengl32.lib;glu32.lib;C:\Qt\5.10.1\msvc2017_64\lib\Qt5OpenGLExtensionsd.lib;C:\Qt\5.10.1\msvc2017_64\lib\Qt5Positioningd.lib;C:\Qt\5.10.1\msvc2017_64\lib\Qt5Quickd.lib;C:\Qt\5.10.1\msvc2017_64\lib\Qt5QuickWidgetsd.lib;C:\Qt\5.10.1\msvc2017_64\lib\Qt5QuickControls2d.lib;C:\Qt\5.10.1\msvc2017_64\lib\Qt5QuickTestd.lib;C:\Qt\5.10.1\msvc2017_64\lib\Qt5UiToolsd.lib;C:\Qt\5.10.1\msvc2017_64\lib\Qt5Widgetsd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <QtMoc>
       <OutputFile>.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
       <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
-      <IncludePath>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtMultimediaWidgets;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtOpenGLExtensions;$(QTDIR)\include\QtPositioning;$(QTDIR)\include\QtQuick;$(QTDIR)\include\QtQuickWidgets;$(QTDIR)\include\QtQuickControls2;$(QTDIR)\include\QtQuickTest;$(QTDIR)\include\QtUiTools;$(QTDIR)\include\QtWidgets;%(AdditionalIncludeDirectories)</IncludePath>
+      <IncludePath>.\GeneratedFiles;.;C:\Qt\5.10.1\msvc2017_64\include;.\GeneratedFiles\$(ConfigurationName);C:\Qt\5.10.1\msvc2017_64\include\QtCore;C:\Qt\5.10.1\msvc2017_64\include\QtGui;C:\Qt\5.10.1\msvc2017_64\include\QtANGLE;C:\Qt\5.10.1\msvc2017_64\include\QtMultimedia;C:\Qt\5.10.1\msvc2017_64\include\QtMultimediaWidgets;C:\Qt\5.10.1\msvc2017_64\include\QtOpenGL;C:\Qt\5.10.1\msvc2017_64\include\QtOpenGLExtensions;C:\Qt\5.10.1\msvc2017_64\include\QtPositioning;C:\Qt\5.10.1\msvc2017_64\include\QtQuick;C:\Qt\5.10.1\msvc2017_64\include\QtQuickWidgets;C:\Qt\5.10.1\msvc2017_64\include\QtQuickControls2;C:\Qt\5.10.1\msvc2017_64\include\QtQuickTest;C:\Qt\5.10.1\msvc2017_64\include\QtUiTools;C:\Qt\5.10.1\msvc2017_64\include\QtWidgets;%(AdditionalIncludeDirectories)</IncludePath>
       <Define>UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_MULTIMEDIA_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_OPENGL_LIB;QT_OPENGLEXTENSIONS_LIB;QT_POSITIONING_LIB;QT_QUICK_LIB;QT_QUICKWIDGETS_LIB;QT_QUICKCONTROLS2_LIB;QT_QMLTEST_LIB;QT_UITOOLS_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</Define>
+      <QTDIR>C:\Qt\5.10.1\msvc2017_64</QTDIR>
     </QtMoc>
     <QtUic>
       <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
       <OutputFile>.\GeneratedFiles\ui_%(Filename).h</OutputFile>
+      <QTDIR>C:\Qt\5.10.1\msvc2017_64</QTDIR>
     </QtUic>
     <QtRcc>
       <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
       <OutputFile>.\GeneratedFiles\qrc_%(Filename).cpp</OutputFile>
+      <QTDIR>C:\Qt\5.10.1\msvc2017_64</QTDIR>
     </QtRcc>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <PreprocessorDefinitions>UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_MULTIMEDIA_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_OPENGL_LIB;QT_OPENGLEXTENSIONS_LIB;QT_POSITIONING_LIB;QT_QUICK_LIB;QT_QUICKWIDGETS_LIB;QT_QUICKCONTROLS2_LIB;QT_QMLTEST_LIB;QT_UITOOLS_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtMultimediaWidgets;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtOpenGLExtensions;$(QTDIR)\include\QtPositioning;$(QTDIR)\include\QtQuick;$(QTDIR)\include\QtQuickWidgets;$(QTDIR)\include\QtQuickControls2;$(QTDIR)\include\QtQuickTest;$(QTDIR)\include\QtUiTools;$(QTDIR)\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;C:\Qt\5.10.1\msvc2017_64\include;.\GeneratedFiles\$(ConfigurationName);C:\Qt\5.10.1\msvc2017_64\include\QtCore;C:\Qt\5.10.1\msvc2017_64\include\QtGui;C:\Qt\5.10.1\msvc2017_64\include\QtANGLE;C:\Qt\5.10.1\msvc2017_64\include\QtMultimedia;C:\Qt\5.10.1\msvc2017_64\include\QtMultimediaWidgets;C:\Qt\5.10.1\msvc2017_64\include\QtOpenGL;C:\Qt\5.10.1\msvc2017_64\include\QtOpenGLExtensions;C:\Qt\5.10.1\msvc2017_64\include\QtPositioning;C:\Qt\5.10.1\msvc2017_64\include\QtQuick;C:\Qt\5.10.1\msvc2017_64\include\QtQuickWidgets;C:\Qt\5.10.1\msvc2017_64\include\QtQuickControls2;C:\Qt\5.10.1\msvc2017_64\include\QtQuickTest;C:\Qt\5.10.1\msvc2017_64\include\QtUiTools;C:\Qt\5.10.1\msvc2017_64\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat />
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
@@ -93,23 +96,26 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
-      <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Qt\5.10.1\msvc2017_64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
-      <AdditionalDependencies>qtmain.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Multimedia.lib;Qt5MultimediaWidgets.lib;Qt5OpenGL.lib;opengl32.lib;glu32.lib;Qt5OpenGLExtensions.lib;Qt5Positioning.lib;Qt5Quick.lib;Qt5QuickWidgets.lib;Qt5QuickControls2.lib;Qt5QuickTest.lib;Qt5UiTools.lib;Qt5Widgets.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>C:\Qt\5.10.1\msvc2017_64\lib\qtmain.lib;C:\Qt\5.10.1\msvc2017_64\lib\Qt5Core.lib;C:\Qt\5.10.1\msvc2017_64\lib\Qt5Gui.lib;C:\Qt\5.10.1\msvc2017_64\lib\Qt5Multimedia.lib;C:\Qt\5.10.1\msvc2017_64\lib\Qt5MultimediaWidgets.lib;C:\Qt\5.10.1\msvc2017_64\lib\Qt5OpenGL.lib;opengl32.lib;glu32.lib;C:\Qt\5.10.1\msvc2017_64\lib\Qt5OpenGLExtensions.lib;C:\Qt\5.10.1\msvc2017_64\lib\Qt5Positioning.lib;C:\Qt\5.10.1\msvc2017_64\lib\Qt5Quick.lib;C:\Qt\5.10.1\msvc2017_64\lib\Qt5QuickWidgets.lib;C:\Qt\5.10.1\msvc2017_64\lib\Qt5QuickControls2.lib;C:\Qt\5.10.1\msvc2017_64\lib\Qt5QuickTest.lib;C:\Qt\5.10.1\msvc2017_64\lib\Qt5UiTools.lib;C:\Qt\5.10.1\msvc2017_64\lib\Qt5Widgets.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <QtMoc>
       <OutputFile>.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
       <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
-      <IncludePath>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtMultimediaWidgets;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtOpenGLExtensions;$(QTDIR)\include\QtPositioning;$(QTDIR)\include\QtQuick;$(QTDIR)\include\QtQuickWidgets;$(QTDIR)\include\QtQuickControls2;$(QTDIR)\include\QtQuickTest;$(QTDIR)\include\QtUiTools;$(QTDIR)\include\QtWidgets;%(AdditionalIncludeDirectories)</IncludePath>
+      <IncludePath>.\GeneratedFiles;.;C:\Qt\5.10.1\msvc2017_64\include;.\GeneratedFiles\$(ConfigurationName);C:\Qt\5.10.1\msvc2017_64\include\QtCore;C:\Qt\5.10.1\msvc2017_64\include\QtGui;C:\Qt\5.10.1\msvc2017_64\include\QtANGLE;C:\Qt\5.10.1\msvc2017_64\include\QtMultimedia;C:\Qt\5.10.1\msvc2017_64\include\QtMultimediaWidgets;C:\Qt\5.10.1\msvc2017_64\include\QtOpenGL;C:\Qt\5.10.1\msvc2017_64\include\QtOpenGLExtensions;C:\Qt\5.10.1\msvc2017_64\include\QtPositioning;C:\Qt\5.10.1\msvc2017_64\include\QtQuick;C:\Qt\5.10.1\msvc2017_64\include\QtQuickWidgets;C:\Qt\5.10.1\msvc2017_64\include\QtQuickControls2;C:\Qt\5.10.1\msvc2017_64\include\QtQuickTest;C:\Qt\5.10.1\msvc2017_64\include\QtUiTools;C:\Qt\5.10.1\msvc2017_64\include\QtWidgets;%(AdditionalIncludeDirectories)</IncludePath>
       <Define>UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_MULTIMEDIA_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_OPENGL_LIB;QT_OPENGLEXTENSIONS_LIB;QT_POSITIONING_LIB;QT_QUICK_LIB;QT_QUICKWIDGETS_LIB;QT_QUICKCONTROLS2_LIB;QT_QMLTEST_LIB;QT_UITOOLS_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</Define>
+      <QTDIR>C:\Qt\5.10.1\msvc2017_64</QTDIR>
     </QtMoc>
     <QtUic>
       <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
       <OutputFile>.\GeneratedFiles\ui_%(Filename).h</OutputFile>
+      <QTDIR>C:\Qt\5.10.1\msvc2017_64</QTDIR>
     </QtUic>
     <QtRcc>
       <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
       <OutputFile>.\GeneratedFiles\qrc_%(Filename).cpp</OutputFile>
+      <QTDIR>C:\Qt\5.10.1\msvc2017_64</QTDIR>
     </QtRcc>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -128,6 +134,15 @@
   <ItemGroup>
     <ClInclude Include="resource.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SyncSlate.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SyncSlate.pro" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\logo.png" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
     <Import Project="$(QtMsBuild)\qt.targets" />
@@ -136,7 +151,7 @@
   </ImportGroup>
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties MocDir=".\GeneratedFiles\$(ConfigurationName)" UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" lupdateOptions="" lupdateOnBuild="0" lreleaseOptions="" Qt5Version_x0020_x64="msvc2017_64" MocOptions="" />
+      <UserProperties MocDir=".\GeneratedFiles\$(ConfigurationName)" UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" lupdateOptions="" lupdateOnBuild="0" lreleaseOptions="" MocOptions="" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

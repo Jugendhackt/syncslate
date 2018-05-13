@@ -1,5 +1,9 @@
 <RCC>
     <qresource prefix="/SyncSlate">
         <file>syncslate.ico</file>
+        <file>Resources/logo.png</file>
+        <file>Resources/timestamp.png</file>
+        <file>Resources/video.png</file>
+        <file>Resources/download.png</file>
     </qresource>
 </RCC>
