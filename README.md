@@ -3,8 +3,7 @@ This project is licensed under the [GNU General Public License v3.0](/LICENSE).
 
 ## Introduction
 ### Problem
-Recording videos is as easy as can be, however, editing can simply be a pain.
-However, editing videos often is a pain in messy video editing software.
+Recording videos is as easy as can be, however, editing can be a pain when dealing with messy video editing software.
 
 ### Solution
 Therefore, syncslate allows to automatically cut videos that were recorded
