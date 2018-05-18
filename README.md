@@ -1,7 +1,6 @@
 <img src="logo.png" alt="Logo" height="70" >
 
-This project is licensed under the \
-[GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html) .
+This project is licensed under the \ [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html) .
 
 ## Introduction
 ### Problem
