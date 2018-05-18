@@ -21,7 +21,7 @@ These libraries and plugins are needed to run syncslate.
 ## Mentions
 ### Authors
 #### Developers
-* [Justus Flügel](http://github.com/technikkeller) [GitLabs](https://gitlab.com/LarsKlette) [GitLabs/IGPlaner](https://gitlab.com/LarsKlette/IGPLANER)
+* [Justus Flügel](http://github.com/technikkeller) | [GitLabs](https://gitlab.com/LarsKlette) | [GitLabs/IGPlaner](https://gitlab.com/LarsKlette/IGPLANER)
 * [Jan Breuer](https://github.com/breuxi)
 * [Lukas](https://github.com/luki)
 
