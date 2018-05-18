@@ -19,6 +19,9 @@ These libraries and plugins are needed to run syncslate.
 * [OBSInfoWriter](https://github.com/partouf/OBSInfoWriter)
 * [FFmpeg](https://ffmpeg.org/) 
 
+These software is required.
+* [Open Broadcaster Software](https://obsproject.com/)
+
 ## Mentions
 ### Authors
 #### Developers
