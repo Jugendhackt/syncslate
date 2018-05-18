@@ -8,7 +8,7 @@ Recording videos is as easy as can be, however, editing can be a pain when deali
 
 ### Solution
 Therefore, syncslate allows to automatically cut videos that were recorded
-with [Open Broadcaster Software](https://obsproject.com/), short OBS. 
+with [*Open Broadcaster Software*](https://obsproject.com/), short OBS. 
 
 ### Principle
 Simply select a video file, as well as a keystone file created by the OBS plugin
@@ -22,9 +22,9 @@ These libraries and plugins are needed to run syncslate.
 ## Mentions
 ### Authors
 #### Developers
-* [Justus Flügel](http://github.com/technikkeller) | [GitLabs](https://gitlab.com/LarsKlette) | [GitLabs/IGPlaner](https://gitlab.com/LarsKlette/IGPLANER)
-* [Jan Breuer](https://github.com/breuxi)
-* [Lukas Müller](https://github.com/luki)
+* [**Justus Flügel**](http://github.com/technikkeller) | [*GitLabs*](https://gitlab.com/LarsKlette) | [*GitLabs/IGPlaner*](https://gitlab.com/LarsKlette/IGPLANER)
+* [**Jan Breuer](https://github.com/breuxi)
+* [Lukas Müller**](https://github.com/luki)
 
 #### Mentors
 * Jasmin
