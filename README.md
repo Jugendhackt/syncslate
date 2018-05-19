@@ -32,3 +32,5 @@ These software is required.
 #### Mentors
 * Jasmin
 * Lirije
+
+(They don't want to give us the link to their GitHub profile, lol)
