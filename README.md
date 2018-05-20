@@ -27,7 +27,7 @@ These software is required.
 #### Developers
 * [**Justus Flügel**](http://github.com/technikkeller) | [*GitLabs*](https://gitlab.com/LarsKlette) | [*GitLabs/IGPlaner*](https://gitlab.com/LarsKlette/IGPLANER)
 * [**Jan Breuer**](https://github.com/breuxi)
-* [**Lukas Müller**](https://github.com/luki)
+* [**Lukas Mueller**](https://github.com/luki)
 
 #### Mentors
 * Jasmin
