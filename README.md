@@ -25,7 +25,7 @@ These software is required.
 ## Mentions
 ### Authors
 #### Developers
-* [**Justus Flügel**](http://github.com/technikkeller) | [*GitLabs*](https://gitlab.com/LarsKlette) | [*GitLabs/IGPlaner*](https://gitlab.com/LarsKlette/IGPLANER)
+* [**Justus Fluegel**](http://github.com/technikkeller) | [*GitLabs*](https://gitlab.com/LarsKlette) | [*GitLabs/IGPlaner*](https://gitlab.com/LarsKlette/IGPLANER)
 * [**Jan Breuer**](https://github.com/breuxi)
 * [**Lukas Mueller**](https://github.com/luki)
 
