@@ -14,6 +14,14 @@ with [*Open Broadcaster Software*](https://obsproject.com/), short OBS.
 Simply select a video file, as well as a keystone file created by the OBS plugin
 [*InfoWriter*](https://github.com/partouf/OBSInfoWriter). That's it!
 
+### Functions
+* Cut Videos
+* Great UI :D (If I have time to push)
+
+#### Comes Soon
+* Timelapses
+* Transsitions
+
 ## Requirements
 These libraries and plugins are needed to run syncslate.
 * [OBSInfoWriter](https://github.com/partouf/OBSInfoWriter)
