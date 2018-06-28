@@ -14,11 +14,11 @@ with [*Open Broadcaster Software*](https://obsproject.com/), short OBS.
 Simply select a video file, as well as a keystone file created by the OBS plugin
 [*InfoWriter*](https://github.com/partouf/OBSInfoWriter). That's it!
 
-### Functions
+## Functions
 * Cut Videos
 * Great UI :D (If I have time to push)
 
-#### Comes Soon
+### Comes Soon
 * Timelapses
 * Transsitions
 
