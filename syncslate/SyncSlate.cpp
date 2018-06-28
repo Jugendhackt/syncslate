@@ -15,40 +15,14 @@ QString timestamp = "";
 QString save = "";
 QString save_path = "";
 
-SyncSlate::SyncSlate(QWidget *parent): 
-	QMainWindow(parent), ui(new Ui::SyncSlateClass)
+bool stampsselected = false;
+bool vidselected = false;
+
+SyncSlate::SyncSlate(QWidget *parent) :
+	QMainWindow(parent, Qt::FramelessWindowHint | Qt::WindowSystemMenuHint), ui(new Ui::SyncSlateClass)
 {
 	ui->setupUi(this);
-	QPixmap pix(":/SyncSlate/Resources/logo.png");
 
-	int w = ui->logo->width();
-	int h = ui->logo->height();
-
-	ui->logo->setPixmap(pix.scaled(w, h, Qt::KeepAspectRatio));
-
-
-	QPixmap pix2(":/SyncSlate/Resources/timestamp.png");
-
-	int w2 = ui->timestamp_logo->width();
-	int h2 = ui->timestamp_logo->height();
-
-	ui->timestamp_logo->setPixmap(pix2.scaled(w2, h2, Qt::KeepAspectRatio));
-
-
-	QPixmap pix3(":/SyncSlate/Resources/video.png");
-
-	int w3 = ui->video_logo->width();
-	int h3 = ui->video_logo->height();
-
-	ui->video_logo->setPixmap(pix3.scaled(w3, h3, Qt::KeepAspectRatio));
-
-
-	QPixmap pix4(":/SyncSlate/Resources/download.png");
-
-	int w4 = ui->export_logo->width();
-	int h4 = ui->export_logo->height();
-
-	ui->export_logo->setPixmap(pix4.scaled(w4, h4, Qt::KeepAspectRatio));
 }
 
 SyncSlate::~SyncSlate() {
@@ -145,7 +119,7 @@ void FfmCut(vector<vector<string>> markers, string path, string out_path, bool i
 
 		cmd += "\" -map [v" + to_string(count) + "] -map [a" + to_string(count) + "] \"" + out_path + "\"";
 
-		system(("echo Das Video wird geschnitten ...\ &"+cmd).c_str());
+		system(("echo Das Video wird geschnitten ... &" + cmd).c_str());
 
 		QMessageBox msgBox;
 		msgBox.setWindowTitle("Schnitt abgeschlossen!");
@@ -238,55 +212,92 @@ void SyncSlate::onTimestamp()
 
 	QString filename = timestampinfo.fileName();
 
-	ui->Timestamp_Name->setText(filename);
 	timestamp = timestamppath;
+
+	if (timestamppath != "") {
+
+		ui->videoButton->setStyleSheet("QPushButton:hover { background-color: rgb(45, 120, 210)} QPushButton {background-color: rgb(23, 131, 225); color:white; padding : 18; border:none; border-radius: 7px}");
+		stampsselected = true;
+		ui->videoFormat->setStyleSheet("color:rgb(106, 111, 122);");
+		ui->video_logo->setStyleSheet("background-image: url(\":/SyncSlate/Resources/video.png\"); background-position : center; background-repeat:no-repeat; background-size: 100px 100px;");
+		ui->line_left->setStyleSheet("background-color:rgb(126, 132, 145);");
+	}
 }
 
 void SyncSlate::on_videoButton_clicked()
 {
-	qInfo("Video auswählen!");
-	const QString videoFolder = QStandardPaths::writableLocation(QStandardPaths::MoviesLocation);
+	if (stampsselected) {
+		qInfo("Video auswählen!");
+		const QString videoFolder = QStandardPaths::writableLocation(QStandardPaths::MoviesLocation);
 
-	QString videopath = QFileDialog::getOpenFileName(
-		this,
-		tr("Video öffnen..."),
-		videoFolder,
-		"Alle Videodateien (*.*);;"
-	);
+		QString videopath = QFileDialog::getOpenFileName(
+			this,
+			tr("Video öffnen..."),
+			videoFolder,
+			"Alle Videodateien (*.*);;"
+		);
 
-	QFileInfo videoinfo(videopath);
+		QFileInfo videoinfo(videopath);
 
-	QString filename = videoinfo.fileName();
+		QString filename = videoinfo.fileName();
 
-	ui->Video_Name->setText(filename);
-	video = videopath;
+		video = videopath;
+
+		if (videopath != "") {
+			ui->runButton->setStyleSheet("QPushButton:hover { background-color: rgb(45, 120, 210)} QPushButton {background-color: rgb(23, 131, 225); color:white; padding : 18; border:none; border-radius: 7px}");
+			vidselected = true;
+			ui->export_logo->setStyleSheet("background-image: url(\":/SyncSlate/Resources/download.png\"); background-position : center; background-repeat:no-repeat; background-size: 100px 100px;");
+			ui->line_right->setStyleSheet("background-color:rgb(126, 132, 145);");
+		}
+	}
 }
 
 void SyncSlate::on_runButton_clicked()
 {
+	if (vidselected) {
+		ifstream ifile(video.toStdString());
+		ifstream file2(timestamp.toStdString());
 
-	ifstream ifile(video.toStdString());
-	ifstream file2(timestamp.toStdString());
-	 
-	if ((bool) ifile && (bool) file2) {
+		if ((bool)ifile && (bool)file2) {
 
-		const QString videoFolder = QStandardPaths::writableLocation(QStandardPaths::MoviesLocation);
+			const QString videoFolder = QStandardPaths::writableLocation(QStandardPaths::MoviesLocation);
 
-		QString local_save_path = QFileDialog::getSaveFileName(
-			this,
-			tr("Speicherort öffnen..."),
-			videoFolder,
-			"Movie Datei (*.mov);;"
-		);
+			QString local_save_path = QFileDialog::getSaveFileName(
+				this,
+				tr("Speicherort öffnen..."),
+				videoFolder,
+				"Movie Datei (*.mov);;"
+			);
 
-		save_path = local_save_path;
+			save_path = local_save_path;
 
-		backend(timestamp.toStdString(), video.toStdString(), local_save_path.toStdString(), false, false, "", "");
-	}
-	else {
-		QMessageBox::information(this, tr("Error!"), "Timestamps oder Video können nicht gelesen werden!");
+			backend(timestamp.toStdString(), video.toStdString(), local_save_path.toStdString(), false, false, "", "");
+		}
+		else {
+			QMessageBox::information(this, tr("Error!"), "Timestamps oder Video können nicht gelesen werden!");
+		}
 	}
 }
 
+void SyncSlate::exit() {
 
+	QApplication::quit();
 
+}
+
+void SyncSlate::minimize() {
+
+	SyncSlate::showMinimized();
+}
+
+void SyncSlate::reloadUi() {
+
+	ui->line_right->setStyleSheet("background-color :rgb(97, 101, 111);");
+	ui->line_left->setStyleSheet("background-color :rgb(97, 101, 111);");
+	ui->video_logo->setStyleSheet("background-image: url(\":/SyncSlate/Resources/videoGrey.png\"); background-position : center; background-repeat:no-repeat; background-size: 100px 100px;");
+	ui->export_logo->setStyleSheet("background-image: url(\":/SyncSlate/Resources/downloadGrey.png\"); background-position : center; background-repeat:no-repeat; background-size: 100px 100px;");
+	ui->videoFormat->setStyleSheet("color:transparent");
+	ui->videoButton->setStyleSheet("QPushButton {background-color:rgb(65, 69, 76);color:rgb(83, 87, 96); padding:18;border:none;border-radius: 7px}");
+	ui->runButton->setStyleSheet("QPushButton {background-color:rgb(65, 69, 76);color:rgb(83, 87, 96); padding:18;border:none;border-radius: 7px}");
+
+}

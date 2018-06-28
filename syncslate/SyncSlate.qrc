@@ -5,5 +5,8 @@
         <file>Resources/timestamp.png</file>
         <file>Resources/video.png</file>
         <file>Resources/download.png</file>
+        <file>Resources/downloadGrey.png</file>
+        <file>Resources/videoGrey.png</file>
+        <file>Resources/reload.png</file>
     </qresource>
 </RCC>
