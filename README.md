@@ -21,6 +21,7 @@ Simply select a video file, as well as a keystone file created by the OBS plugin
 ### Comes Soon
 * Timelapses
 * Transsitions
+* **Wiki**
 
 ## Requirements
 These libraries and plugins are needed to run syncslate.
