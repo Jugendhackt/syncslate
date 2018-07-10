@@ -1,38 +1,44 @@
 #pragma once
 
 #include <QtWidgets/QMainWindow>
-#include "ui_SyncSlate.h"
+#include "ui_settings.h"
 #include <QMouseEvent>
 #include <qsettings.h>
 
 namespace Ui
 {
-	class SyncSlate;
+	class Settings;
 }
 
-class SyncSlate : public QMainWindow
+class Settings : public QMainWindow
 {
 	Q_OBJECT
 
 public:
-	explicit SyncSlate(QWidget *parent = 0);
-	~SyncSlate();
-
+	explicit Settings(QWidget *parent = 0);
+	~Settings();
 
 private slots:
-	void onTimestamp();
-
-	void on_videoButton_clicked();
-
-    void on_runButton_clicked();
 
 	void exit();
 
 	void minimize();
 
-	void reloadUi();
+	void closeForm();
 
-	void OpenSettings();
+	void open_fps_popup();
+
+	void close_fps_popup();
+
+	void change_fps_popup();
+
+	void fps_popup_komma();
+
+	void fps_popup_prozent();
+
+	void fps_popup_fps();
+
+	void fps_out_updated();
 
 	void lock() {
 		locked = true;
@@ -41,7 +47,7 @@ private slots:
 	void unlock() { locked = false; }
 
 protected:
-	Ui::SyncSlateClass *ui;
+	Ui::SettingsClass *ui;
 	void mousePressEvent(QMouseEvent *evt)
 	{
 		oldPos = evt->globalPos();
@@ -65,7 +71,7 @@ protected:
 		}
 		oldPos = evt->globalPos();
 
-		QSettings settings("JugendHackt","SyncSlate");
+		QSettings settings("JugendHackt", "SyncSlate");
 		settings.setValue("x_pos", x_pos);
 		settings.setValue("y_pos", y_pos);
 	}

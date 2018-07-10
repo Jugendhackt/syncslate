@@ -120,18 +120,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Settings.cpp" />
     <ClCompile Include="SyncSlate.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="SyncSlate.h" />
   </ItemGroup>
   <ItemGroup>
+    <QtUic Include="Settings.ui">
+      <SubType>Designer</SubType>
+    </QtUic>
     <QtUic Include="SyncSlate.ui" />
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="SyncSlate.qrc" />
   </ItemGroup>
   <ItemGroup>
+    <QtMoc Include="Settings.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>

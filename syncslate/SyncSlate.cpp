@@ -1,12 +1,17 @@
 #include "SyncSlate.h"
 #include "ui_SyncSlate.h"
+#include "Settings.h"
 #include <fstream>
 #include <QFileDialog>
 #include <QStandardPaths>
 #include <QMessageBox>
 #include <QFileInfo>
 #include <vector>
+#include <qsettings.h>
+#include <qdesktopservices.h>
 
+extern int x_pos;
+extern int y_pos;
 
 using namespace std;
 
@@ -18,10 +23,29 @@ QString save_path = "";
 bool stampsselected = false;
 bool vidselected = false;
 
+double getSpeedMultiplier() {
+
+	QSettings settings;
+	double prozent = settings.value("settings/zeitrafferspeed", 200).toDouble();
+	return 1 / (prozent / 100);
+
+}
+
 SyncSlate::SyncSlate(QWidget *parent) :
 	QMainWindow(parent, Qt::FramelessWindowHint | Qt::WindowSystemMenuHint), ui(new Ui::SyncSlateClass)
 {
 	ui->setupUi(this);
+
+	QCoreApplication::setOrganizationName("JugendHackt");
+	QCoreApplication::setApplicationName("SyncSlate");
+
+	QSettings settings;
+
+	int x_pos = settings.value("x_pos", NULL).toInt();
+	int y_pos = settings.value("y_pos", NULL).toInt();
+
+	if (x_pos != NULL && y_pos != NULL)
+		move(x_pos, y_pos);
 
 }
 
@@ -62,12 +86,25 @@ void FfmCut(vector<vector<string>> markers, string path, string out_path, bool i
 	cmd += " -filter_complex \"";
 
 	vector<string> keystone_one_h_m_s;
+	vector<string> keystone_two_h_m_s;
 	int count = 0;
 	int count_vids_used = 1;
 
+	QSettings settings;
+
+	string Splitter1 = settings.value("settings/schnittmarkerindentificationname", "Timestamp 1").toString().toStdString();
+	string Splitter2 = settings.value("settings/zeitraffermarkerindentificationname", "Timestamp 2").toString().toStdString();
+
+
 	for (int i = 0; i < markers.size(); i++) { // 1. Marker Rausfiltern
 		if (markers.at(i).size() != 0) {
-			if (strstr(markers.at(i).at(1).c_str(), "1") != NULL) { keystone_one_h_m_s.push_back(markers.at(i).at(0)); }
+			if (strstr(markers.at(i).at(1).c_str(),Splitter1.c_str()) != NULL) { keystone_one_h_m_s.push_back(markers.at(i).at(0)); }
+		}
+	}
+
+	for (int i = 0; i < markers.size(); i++) { // 1. Marker Rausfiltern
+		if (markers.at(i).size() != 0) {
+			if (strstr(markers.at(i).at(1).c_str(), Splitter2.c_str()) != NULL) { keystone_two_h_m_s.push_back(markers.at(i).at(0)); }
 		}
 	}
 
@@ -86,6 +123,21 @@ void FfmCut(vector<vector<string>> markers, string path, string out_path, bool i
 
 	}
 
+	vector<string> keystone_two;
+
+	for (int i = 0; i < keystone_two_h_m_s.size(); i++) {
+		vector<string> hms = explode(keystone_two_h_m_s.at(i), ':');
+
+		int h = stoi(hms.at(0));
+		int m = stoi(hms.at(1));
+		int s = stoi(hms.at(2));
+
+		int s_ges = s + m * 60 + h * 3600;
+
+		keystone_two.push_back(to_string(s_ges));
+
+	}
+
 	if (keystone_one.size() % 2 == 0) {
 
 		for (int x = 0; x < keystone_one.size(); x += 2) {
@@ -96,7 +148,7 @@ void FfmCut(vector<vector<string>> markers, string path, string out_path, bool i
 			cmd += "[0:v]trim=start=" + keystone_one.at(x) + ":end=" + keystone_one.at(x + 1) + ",setpts=PTS-STARTPTS[v" + to_string(count) + "]";
 			cmd += ";[0:a]atrim=start=" + keystone_one.at(x) + ":end=" + keystone_one.at(x + 1) + ",asetpts=PTS-STARTPTS[a" + to_string(count) + "]";
 
-			if (count >= 2) {
+			if (count > 1) {
 
 				cmd += ";[v" + to_string(count - 1) + "][v" + to_string(count) + "]concat[v" + to_string(count + 1) + "]";
 				cmd += ";[a" + to_string(count - 1) + "][a" + to_string(count) + "]concat=v=0:a=1[a" + to_string(count + 1) + "]";
@@ -219,11 +271,10 @@ void SyncSlate::onTimestamp()
 		ui->videoButton->setStyleSheet("QPushButton:hover { background-color: rgb(45, 120, 210)} QPushButton {background-color: rgb(23, 131, 225); color:white; padding : 18; border:none; border-radius: 7px}");
 		stampsselected = true;
 		ui->videoFormat->setStyleSheet("color:rgb(106, 111, 122);");
-		ui->video_logo->setStyleSheet("background-image: url(\":/SyncSlate/Resources/video.png\"); background-position : center; background-repeat:no-repeat; background-size: 100px 100px;");
+		ui->video_logo->setStyleSheet("background-image: url(\":/SyncSlate/Resources/video.png\"); background-position : center; background-repeat:no-repeat; ");
 		ui->line_left->setStyleSheet("background-color:rgb(126, 132, 145);");
 	}
 }
-
 void SyncSlate::on_videoButton_clicked()
 {
 	if (stampsselected) {
@@ -246,12 +297,11 @@ void SyncSlate::on_videoButton_clicked()
 		if (videopath != "") {
 			ui->runButton->setStyleSheet("QPushButton:hover { background-color: rgb(45, 120, 210)} QPushButton {background-color: rgb(23, 131, 225); color:white; padding : 18; border:none; border-radius: 7px}");
 			vidselected = true;
-			ui->export_logo->setStyleSheet("background-image: url(\":/SyncSlate/Resources/download.png\"); background-position : center; background-repeat:no-repeat; background-size: 100px 100px;");
+			ui->export_logo->setStyleSheet("background-image: url(\":/SyncSlate/Resources/download.png\"); background-position : center; background-repeat:no-repeat;");
 			ui->line_right->setStyleSheet("background-color:rgb(126, 132, 145);");
 		}
 	}
 }
-
 void SyncSlate::on_runButton_clicked()
 {
 	if (vidselected) {
@@ -278,26 +328,31 @@ void SyncSlate::on_runButton_clicked()
 		}
 	}
 }
-
 void SyncSlate::exit() {
 
 	QApplication::quit();
 
 }
-
 void SyncSlate::minimize() {
 
 	SyncSlate::showMinimized();
 }
-
 void SyncSlate::reloadUi() {
 
 	ui->line_right->setStyleSheet("background-color :rgb(97, 101, 111);");
 	ui->line_left->setStyleSheet("background-color :rgb(97, 101, 111);");
-	ui->video_logo->setStyleSheet("background-image: url(\":/SyncSlate/Resources/videoGrey.png\"); background-position : center; background-repeat:no-repeat; background-size: 100px 100px;");
-	ui->export_logo->setStyleSheet("background-image: url(\":/SyncSlate/Resources/downloadGrey.png\"); background-position : center; background-repeat:no-repeat; background-size: 100px 100px;");
+	ui->video_logo->setStyleSheet("background-image: url(\":/SyncSlate/Resources/videoGrey.png\"); background-position : center; background-repeat:no-repeat; ");
+	ui->export_logo->setStyleSheet("background-image: url(\":/SyncSlate/Resources/downloadGrey.png\"); background-position : center; background-repeat:no-repeat; ");
 	ui->videoFormat->setStyleSheet("color:transparent");
 	ui->videoButton->setStyleSheet("QPushButton {background-color:rgb(65, 69, 76);color:rgb(83, 87, 96); padding:18;border:none;border-radius: 7px}");
 	ui->runButton->setStyleSheet("QPushButton {background-color:rgb(65, 69, 76);color:rgb(83, 87, 96); padding:18;border:none;border-radius: 7px}");
+
+}
+void SyncSlate::OpenSettings() {
+
+	Settings *settings = new Settings();
+	settings->show();
+
+	this->close();
 
 }

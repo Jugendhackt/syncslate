@@ -36,14 +36,23 @@
     <ClCompile Include="SyncSlate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Settings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="SyncSlate.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="Settings.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="SyncSlate.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Settings.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>

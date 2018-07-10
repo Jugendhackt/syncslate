@@ -8,5 +8,6 @@
         <file>Resources/downloadGrey.png</file>
         <file>Resources/videoGrey.png</file>
         <file>Resources/reload.png</file>
+        <file>Resources/gear.png</file>
     </qresource>
 </RCC>

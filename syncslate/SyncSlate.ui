@@ -10,6 +10,18 @@
     <height>446</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>1150</width>
+    <height>446</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1150</width>
+    <height>446</height>
+   </size>
+  </property>
   <property name="palette">
    <palette>
     <active>
@@ -19,6 +31,15 @@
         <red>83</red>
         <green>87</green>
         <blue>96</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Highlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>72</red>
+        <green>66</green>
+        <blue>121</blue>
        </color>
       </brush>
      </colorrole>
@@ -33,6 +54,15 @@
        </color>
       </brush>
      </colorrole>
+     <colorrole role="Highlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>72</red>
+        <green>66</green>
+        <blue>121</blue>
+       </color>
+      </brush>
+     </colorrole>
     </inactive>
     <disabled>
      <colorrole role="Window">
@@ -41,6 +71,15 @@
         <red>83</red>
         <green>87</green>
         <blue>96</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Highlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>72</red>
+        <green>66</green>
+        <blue>121</blue>
        </color>
       </brush>
      </colorrole>
@@ -83,7 +122,7 @@
       <enum>QLayout::SetDefaultConstraint</enum>
      </property>
      <item>
-      <widget class="QWidget" name="widget" native="true">
+      <widget class="QWidget" name="widget1" native="true">
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>
          <widget class="QLabel" name="timestamp_logo">
@@ -97,7 +136,6 @@
            <string notr="true">QLabel {background-image: url(&quot;:/SyncSlate/Resources/timestamp.png&quot;);
 			background-position: center;
 			background-repeat:no-repeat;
-			background-size: 100px 100px;
 }</string>
           </property>
           <property name="text">
@@ -245,7 +283,7 @@ QPushButton {background-color: rgb(23, 131, 225);color:white;padding:18;border:n
       </widget>
      </item>
      <item>
-      <widget class="QWidget" name="widget" native="true">
+      <widget class="QWidget" name="widget2" native="true">
        <layout class="QVBoxLayout" name="verticalLayout">
         <item>
          <widget class="QLabel" name="video_logo">
@@ -259,7 +297,6 @@ QPushButton {background-color: rgb(23, 131, 225);color:white;padding:18;border:n
            <string notr="true">QLabel {background-image: url(&quot;:/SyncSlate/Resources/videoGrey.png&quot;);
 			background-position: center;
 			background-repeat:no-repeat;
-			background-size: 100px 100px;
 }</string>
           </property>
           <property name="text">
@@ -404,12 +441,49 @@ QPushButton {background-color: rgb(23, 131, 225);color:white;padding:18;border:n
       </widget>
      </item>
      <item>
-      <widget class="QWidget" name="widget" native="true">
+      <widget class="QWidget" name="widget3" native="true">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="palette">
+        <palette>
+         <active>
+          <colorrole role="Link">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>72</red>
+             <green>66</green>
+             <blue>121</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </active>
+         <inactive>
+          <colorrole role="Link">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>72</red>
+             <green>66</green>
+             <blue>121</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </inactive>
+         <disabled>
+          <colorrole role="Link">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>72</red>
+             <green>66</green>
+             <blue>121</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </disabled>
+        </palette>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_3">
         <item>
@@ -442,7 +516,6 @@ QPushButton {background-color: rgb(23, 131, 225);color:white;padding:18;border:n
            <string notr="true">QLabel {background-image: url(&quot;:/SyncSlate/Resources/downloadGrey.png&quot;);
 			background-position: center;
 			background-repeat:no-repeat;
-			background-size: 100px 100px;
 }</string>
           </property>
           <property name="text">
@@ -490,7 +563,7 @@ QPushButton {background-color: rgb(23, 131, 225);color:white;padding:18;border:n
    <widget class="QLabel" name="logo">
     <property name="geometry">
      <rect>
-      <x>890</x>
+      <x>100</x>
       <y>380</y>
       <width>243</width>
       <height>50</height>
@@ -502,7 +575,6 @@ QPushButton {background-color: rgb(23, 131, 225);color:white;padding:18;border:n
 			border-width:0px;
 			background-position: center;
 			background-repeat:no-repeat;	
-			background-size: 100px 100px;
 }</string>
     </property>
     <property name="text">
@@ -670,6 +742,101 @@ border-width:0px;</string>
      <string/>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>20</y>
+      <width>30</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(&quot;:/SyncSlate/Resources/gear.png&quot;) 0 0 0 0 stretch stretch;
+border-width:0px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>350</y>
+      <width>1000</width>
+      <height>5</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(126, 132, 145);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="info">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>380</y>
+      <width>671</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="palette">
+     <palette>
+      <active>
+       <colorrole role="Link">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>72</red>
+          <green>66</green>
+          <blue>121</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </active>
+      <inactive>
+       <colorrole role="Link">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>72</red>
+          <green>66</green>
+          <blue>121</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </inactive>
+      <disabled>
+       <colorrole role="Link">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>72</red>
+          <green>66</green>
+          <blue>121</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </disabled>
+     </palette>
+    </property>
+    <property name="font">
+     <font>
+      <family>AR DESTINE</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;von &lt;a href=&quot;http://www.github.com/Technikkeller&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#000000;&quot;&gt;Justus&lt;/span&gt;&lt;/a&gt;, &lt;a href=&quot;http://www.github.com/breuxi&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#000000;&quot;&gt;Jan&lt;/span&gt;&lt;/a&gt; und &lt;a href=&quot;http://www.github.com/luki&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#000000;&quot;&gt;Lukas&lt;/span&gt;&lt;/a&gt; bei der @JugendHackt 2018 in Köln, &lt;br/&gt;fortgesetzt von &lt;span style=&quot; color:#000000;&quot;/&gt;&lt;a href=&quot;http://www.github.com/Technikkeller&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#000000;&quot;&gt;Justus&lt;/span&gt;&lt;/a&gt; @Home&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="openExternalLinks">
+     <bool>true</bool>
+    </property>
+    <property name="textInteractionFlags">
+     <set>Qt::TextBrowserInteraction</set>
+    </property>
+   </widget>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
@@ -745,6 +912,22 @@ border-width:0px;</string>
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>SyncSlateClass</receiver>
+   <slot>OpenSettings()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>86</x>
+     <y>32</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>170</x>
+     <y>26</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>onTimestamp()</slot>
@@ -753,5 +936,7 @@ border-width:0px;</string>
   <slot>exit()</slot>
   <slot>minimize()</slot>
   <slot>reloadUi()</slot>
+  <slot>OpenSettings()</slot>
+  <slot>on_myLabel_linkActivated(QString)</slot>
  </slots>
 </ui>
