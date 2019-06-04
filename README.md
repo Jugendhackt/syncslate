@@ -14,14 +14,14 @@ with [*Open Broadcaster Software*](https://obsproject.com/), short OBS.
 Simply select a video file, as well as a keystone file created by the OBS plugin
 [*InfoWriter*](https://github.com/partouf/OBSInfoWriter). That's it!
 
-## Functions
+## Capabilities
 * Cut Videos
-* Great UI :D (If I have time to push)
 
 ### Comes Soon
 * Timelapses
 * Transsitions
 * **Wiki**
+* Improved UI
 
 ## Wiki 
 [here](https://github.com/Jugendhackt/syncslate/blob/master/Wiki.md)
@@ -33,6 +33,9 @@ These libraries and plugins are needed to run syncslate.
 
 These applications are required.
 * [Open Broadcaster Software](https://obsproject.com/)
+
+## Presentation
+[See](https://www.youtube.com/watch?v=fo6jTrCN0UI&feature=youtu.be) the original version presented at Jugend hackt Cologne 2018 (in German)
 
 ## Mentions
 ### Authors
