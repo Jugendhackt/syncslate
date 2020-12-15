@@ -40,7 +40,7 @@ These applications are required.
 ## Mentions
 ### Authors
 #### Developers
-* [**Justus Fluegel**](http://github.com/technikkeller) | [*GitLabs*](https://gitlab.com/LarsKlette) | [*GitLabs/IGPlaner*](https://gitlab.com/LarsKlette/IGPLANER)
+* [**Justus Fluegel**](http://github.com/technikkeller) | [*GitLab*](https://gitlab.com/JustusFluegel) | [*GitLab/larning*](https://gitlab.com/larning)
 * [**Jan Breuer**](https://github.com/breuxi)
 * [**Lukas Mueller**](https://github.com/luki)
 
